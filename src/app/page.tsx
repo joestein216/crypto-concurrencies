@@ -32,24 +32,11 @@ export default async function Page() {
                   .eq('pair', 'DOGE-USD')
 
   return (
-    <div>
-      <div className="grid grid-cols-2 gap-0">
-        <div className="bg-blue-200 p-4">
-          <LineGraph data={market_snapshot_btc_usd as ChartDataItem[]}/>
-        </div>
-        <div className="bg-blue-300 p-4">
-          <LineGraph data={market_snapshot_eth_usd as ChartDataItem[]}/>
-        </div>
-      </div>
-      <div className="grid grid-cols-2 gap-0">
-        <div className="bg-blue-200 p-4">
-          <LineGraph data={market_snapshot_xrp_usd as ChartDataItem[]}/>
-        </div>
-        <div className="bg-blue-300 p-4">
-          <LineGraph data={market_snapshot_doge_usd as ChartDataItem[]}/>
-        </div>
-      </div>
-    </div>
-    
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div className="bg-blue-100 p-6 rounded-lg"><LineGraph data={market_snapshot_btc_usd as ChartDataItem[]}/></div>
+      <div className="bg-blue-200 p-6 rounded-lg"><LineGraph data={market_snapshot_eth_usd as ChartDataItem[]}/></div>
+      <div className="bg-blue-300 p-6 rounded-lg"><LineGraph data={market_snapshot_xrp_usd as ChartDataItem[]}/></div>
+      <div className="bg-blue-400 p-6 rounded-lg"><LineGraph data={market_snapshot_doge_usd as ChartDataItem[]}/></div>
+    </div>  
   )
 }
