@@ -26,6 +26,7 @@ export const robinhoodCollector: MarketCollector = {
       const snapshot: MarketSnapshotInsert = {
         venue: "robinhood",
         source_type: "order_book",
+        time_in_ms: new Date(new Date().getUTCFullYear(), new Date().getUTCMonth(), new Date().getUTCDate(), new Date().getUTCHours(), new Date().getUTCMinutes(), new Date().getUTCSeconds()).getTime(),
 
         base_asset: pair.baseAsset,
         quote_asset: pair.quoteAsset,
