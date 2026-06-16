@@ -17,6 +17,7 @@ export type MarketPair = {
 export type MarketSnapshotInsert = {
   venue: Venue;
   source_type: SourceType;
+  time_in_ms: number;
 
   base_asset: string;
   quote_asset: string;

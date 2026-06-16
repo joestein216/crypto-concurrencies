@@ -10,13 +10,13 @@ export async function insertSnapshots(snapshots: MarketSnapshotInsert[]) {
   const { data, error } = await supabase
     .from("market_snapshots")
     .insert(snapshots)
-    .select("id, venue, pair, observed_price, collected_at");
+    .select("id, venue, pair, observed_price, time_in_ms");
 
   if (error) {
     throw error;
   }
 
   revalidatePath('/dashboard/products');
-  
+
   return data;
 }
