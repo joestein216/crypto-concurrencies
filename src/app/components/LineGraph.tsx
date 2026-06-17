@@ -60,7 +60,7 @@ export default function LineGraph({ data }: LineGraphProps) {
             tickLine={false}
             axisLine={false}
             dy={5}
-            angle={-90} 
+            angle={-45} 
             tick={{ fontSize: 12, textAnchor: 'end' }} 
             height={60}
             className="text-xs font-medium fill-slate-400 dark:fill-slate-500"
