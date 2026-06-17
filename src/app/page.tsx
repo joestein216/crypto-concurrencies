@@ -7,7 +7,7 @@ export default async function Page() {
   const cookieStore = await cookies()
   const supabase = createClient(cookieStore)
 
-  let { data: market_snapshot_btc_usd } = 
+  const { data: market_snapshot_btc_usd } = 
     await supabase.from('market_snapshots')
                   .select('time_in_ms, pair, observed_price')
                   .eq('pair', 'BTC-USD')
