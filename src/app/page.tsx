@@ -53,7 +53,7 @@ export default async function Page() {
   const market_snapshot_sol_usd_reversed = [...(market_snapshot_sol_usd ?? [])].reverse();
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4">
       <div className="bg-blue-100 p-6 rounded-lg"><LineGraph data={market_snapshot_btc_usd_reversed as ChartDataItem[]}/></div>
       <div className="bg-blue-200 p-6 rounded-lg"><LineGraph data={market_snapshot_eth_usd_reversed as ChartDataItem[]}/></div>
       <div className="bg-blue-300 p-6 rounded-lg"><LineGraph data={market_snapshot_xrp_usd_reversed as ChartDataItem[]}/></div>

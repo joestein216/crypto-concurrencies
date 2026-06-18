@@ -36,8 +36,8 @@ const formatXAxis = (tickItem: number): string => {
 export default function LineGraph({ data }: LineGraphProps) {
   return (
     // Tailwind classes handle the container scaling, background, border, and shadows
-    <div className="w-[650px] h-fit p-6 bg-white rounded-2xl border border-slate-100 shadow-sm dark:bg-slate-900 dark:border-slate-800">
-      <ResponsiveContainer width={500} height={400}>
+    <div className="h-fit p-6 bg-white rounded-2xl border border-slate-100 shadow-sm dark:bg-slate-900 dark:border-slate-800">
+      <ResponsiveContainer width="100%" height={400}>
         <LineChart
           data={data}
           margin={{ top: 40, right: 10, left: 20, bottom: 80 }}
@@ -60,7 +60,7 @@ export default function LineGraph({ data }: LineGraphProps) {
             tickLine={false}
             axisLine={false}
             dy={5}
-            angle={-45} 
+            angle={-45}
             tick={{ fontSize: 12, textAnchor: 'end' }} 
             height={60}
             className="text-xs font-medium fill-slate-400 dark:fill-slate-500"
